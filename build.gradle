@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+}
+
+group 'Test-project'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter-params:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+
+    implementation 'org.seleniumhq.selenium:selenium-java:4.0.0'
+
+    testImplementation('org.projectlombok:lombok')
+    implementation 'org.projectlombok:lombok:1.16.20'
+}
+
+test {
+    useJUnitPlatform()
+}
